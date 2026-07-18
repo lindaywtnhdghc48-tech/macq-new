@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 
 import {
-  classicAccordionItems,
   digitalAccordionItems,
   digitalRatesOverMillion,
   digitalRatesUnderMillion,
@@ -115,28 +114,6 @@ export function RatesSection() {
         </div>
 
         <AccordionGroup items={digitalAccordionItems} alwaysOpen showChevron={false} />
-
-        <div
-          id="classic-rates"
-          className="scroll-mt-36 rounded-[36px] bg-white px-5 py-10 shadow-[0_22px_70px_rgba(8,15,39,0.08)] sm:px-8 lg:px-12"
-        >
-          <div className="mx-auto max-w-[760px] text-center">
-            <h2 className="font-[family:var(--font-display)] text-4xl leading-[0.95] tracking-[-0.04em] text-[var(--ink)] sm:text-6xl">
-              Macquarie Term Deposit
-              <br />
-              fixed interest rates
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-[var(--copy)]">
-              Our classic Macquarie Term Deposit offering.
-            </p>
-            <p className="mt-2 text-lg leading-8 text-[var(--copy)]">
-              Available for company or trust accounts with a minimum balance of $5,000.
-            </p>
-          </div>
-
-        </div>
-
-        <AccordionGroup items={classicAccordionItems} />
       </div>
     </section>
   );
