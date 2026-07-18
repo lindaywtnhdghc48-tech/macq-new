@@ -70,7 +70,7 @@ export function Header() {
             >
               {item.label}
               {index === 0 ? (
-                <span className="absolute bottom-0 left-5 h-[3px] w-[78px] bg-[var(--brand)]" />
+                <span className="absolute right-5 bottom-0 left-5 h-[3px] bg-[var(--brand)]" />
               ) : null}
             </a>
           ))}

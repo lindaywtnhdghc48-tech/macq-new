@@ -64,19 +64,13 @@ export const bankingAppImageUrl = `https://coresg-normal.trae.ai/api/ide/v1/text
 
 export const utilityNavItems: NavItem[] = [
   { label: "Personal and Business", href: "#" },
-  { label: "Advisers", href: "#" },
-  { label: "Brokers", href: "#" },
-  { label: "Digital banking", href: "#digital-banking" },
   { label: "Contact us", href: "#open-an-account" },
-  { label: "Help Centre", href: "#faqs" },
+  { label: "Help center", href: "#faqs" },
 ];
 
 export const primaryNavItems: NavItem[] = [
-  { label: "Everyday banking", href: "/" },
-  { label: "Home loans", href: "#" },
-  { label: "Investing and super", href: "#" },
-  { label: "Business banking", href: "#" },
-  { label: "Private Bank", href: "#" },
+  { label: "Individual Accounts", href: "#" },
+  { label: "Company Accounts", href: "#" },
 ];
 
 export const sectionNavItems: NavItem[] = [

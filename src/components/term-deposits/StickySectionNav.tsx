@@ -45,8 +45,9 @@ export function StickySectionNav() {
   };
 
   return (
-    <div className="sticky top-[89px] z-40 border-b border-[var(--border-soft)] bg-white/94 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-[1120px] flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
+    <div className="sticky top-[89px] z-40">
+      <div className="mx-auto max-w-[1120px] border border-[var(--border-soft)] bg-white shadow-[0_8px_22px_rgba(12,13,16,0.12)]">
+        <div className="flex flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-5">
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-[var(--ink)] sm:gap-x-8 sm:text-base">
           {sectionNavItems.map((item, index) => {
             const targetId = item.href.replace("#", "");
@@ -76,6 +77,7 @@ export function StickySectionNav() {
           Apply now
           <ArrowRight className="h-4 w-4" />
         </a>
+        </div>
       </div>
     </div>
   );

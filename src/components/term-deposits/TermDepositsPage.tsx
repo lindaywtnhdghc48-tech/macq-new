@@ -14,7 +14,9 @@ export function TermDepositsPage() {
     <div className="bg-[var(--surface)] text-[var(--ink)]">
       <Header />
       <HeroBanner />
-      <StickySectionNav />
+      <div className="relative z-30 mx-auto -mt-1 sm:-mt-2 lg:-mt-9">
+        <StickySectionNav />
+      </div>
       <ProductComparison />
       <RatesSection />
       <OpenAccountSection />
