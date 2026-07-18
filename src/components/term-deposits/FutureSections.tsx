@@ -21,7 +21,7 @@ export function FutureSections() {
               </h2>
               <p className="mt-5 text-base leading-8 text-[var(--copy)]">{section.description}</p>
               <a
-                href="#"
+                href={`#${section.id}`}
                 className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--brand)] transition hover:gap-3"
               >
                 Section ready for your next screenshot

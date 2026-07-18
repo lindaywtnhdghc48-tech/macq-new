@@ -201,14 +201,17 @@ export function RatesSection() {
               <p className="font-semibold text-[var(--ink)]">Do you currently hold a term deposit with us?</p>
               <p>
                 If you would like to view your current term deposit rate,{" "}
-                <a href="#" className="font-semibold text-[var(--ink)] underline underline-offset-4">
+                <a
+                  href="#open-an-account"
+                  className="font-semibold text-[var(--ink)] underline underline-offset-4"
+                >
                   log in to your account
                 </a>
                 <ArrowUpRight className="ml-1 inline h-4 w-4" />
               </p>
               <p>
                 If your term deposit is reaching maturity and you&apos;re not sure which account you hold,{" "}
-                <a href="#" className="font-semibold text-[var(--ink)] underline underline-offset-4">
+                <a href="#faqs" className="font-semibold text-[var(--ink)] underline underline-offset-4">
                   find out how to check which term deposit account you have
                 </a>
                 .
@@ -265,14 +268,17 @@ export function RatesSection() {
               <p className="font-semibold text-[var(--ink)]">Do you currently hold a term deposit with us?</p>
               <p>
                 If you would like to view your current term deposit rate,{" "}
-                <a href="#" className="font-semibold text-[var(--ink)] underline underline-offset-4">
+                <a
+                  href="#open-an-account"
+                  className="font-semibold text-[var(--ink)] underline underline-offset-4"
+                >
                   log in to your account
                 </a>
                 <ArrowUpRight className="ml-1 inline h-4 w-4" />
               </p>
               <p>
                 If your term deposit is reaching maturity and you&apos;re not sure which account you hold,{" "}
-                <a href="#" className="font-semibold text-[var(--ink)] underline underline-offset-4">
+                <a href="#faqs" className="font-semibold text-[var(--ink)] underline underline-offset-4">
                   find out how to check which term deposit account you have
                 </a>
                 .

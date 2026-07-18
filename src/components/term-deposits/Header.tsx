@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Lock, Menu, Search, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import {
   primaryNavItems,
@@ -29,7 +29,7 @@ export function Header() {
         </div>
       </div>
 
-      <div className="mx-auto flex min-h-[74px] max-w-[1440px] items-center justify-between gap-4 px-4 sm:px-6 lg:min-h-[98px] lg:px-8">
+      <div className="mx-auto flex min-h-[72px] max-w-[1440px] items-center justify-between gap-4 px-4 sm:px-6 lg:min-h-[96px] lg:px-8">
         <button
           type="button"
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 text-white transition hover:bg-white/10 lg:hidden"
@@ -40,7 +40,7 @@ export function Header() {
         </button>
 
         <a
-          href="#"
+          href="#top"
           className="hidden shrink-0 items-center gap-[11px] pr-[22px] text-white lg:ml-[24px] lg:inline-flex"
         >
           <Image
@@ -63,9 +63,7 @@ export function Header() {
             <a
               key={item.label}
               href={item.href}
-              className={`relative flex items-center px-5 text-[15px] font-semibold tracking-[-0.015em] transition hover:text-white ${
-                index === 0 ? "text-white" : "text-white"
-              }`}
+              className="relative flex items-center px-5 text-[15px] font-semibold tracking-[-0.015em] text-white transition hover:text-white"
               style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
             >
               {item.label}
@@ -76,7 +74,7 @@ export function Header() {
           ))}
         </nav>
 
-        <a href="#" className="inline-flex items-center gap-2 text-white lg:hidden">
+        <a href="#top" className="inline-flex items-center gap-2 text-white lg:hidden">
           <Image
             src="/mlogo-white.svg"
             alt="Macquarie logo"
@@ -91,23 +89,6 @@ export function Header() {
             MACQUARIE
           </span>
         </a>
-
-        <div className="flex items-center gap-5 lg:self-stretch">
-          <a
-            href="#"
-            aria-label="Search"
-            className="hidden h-11 w-11 items-center justify-center rounded-full border border-white/18 text-white transition hover:bg-white/10 sm:inline-flex lg:self-center"
-          >
-            <Search className="h-[18px] w-[18px]" strokeWidth={2} />
-          </a>
-          <a
-            href="#"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-[var(--brand)] px-4 text-sm font-semibold text-white transition hover:bg-[var(--brand-dark)] sm:min-w-[112px] lg:min-h-full lg:min-w-[138px] lg:gap-2 lg:rounded-none lg:px-0 lg:text-[15px]"
-          >
-            <Lock className="hidden h-4 w-4 lg:block" strokeWidth={2.1} />
-            Log in
-          </a>
-        </div>
       </div>
 
       {mobileOpen ? (

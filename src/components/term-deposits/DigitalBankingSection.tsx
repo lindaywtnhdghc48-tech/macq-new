@@ -22,7 +22,7 @@ export function DigitalBankingSection() {
             </h2>
             <p className="mt-5 text-base leading-8 text-[var(--copy)] sm:text-lg">
               Get set to save more - the{" "}
-              <a href="#" className="underline underline-offset-4">
+              <a href="#faqs" className="underline underline-offset-4">
                 Macquarie Mobile Banking app
               </a>{" "}
               is designed to make your life easier.
