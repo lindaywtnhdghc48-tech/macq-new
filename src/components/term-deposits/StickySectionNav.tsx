@@ -49,22 +49,17 @@ export function StickySectionNav() {
       <div className="mx-auto max-w-[1120px] border border-[var(--border-soft)] bg-white shadow-[0_8px_22px_rgba(12,13,16,0.12)]">
         <div className="flex flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-5">
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-[var(--ink)] sm:gap-x-8 sm:text-base">
-          {sectionNavItems.map((item, index) => {
+          {sectionNavItems.map((item) => {
             const targetId = item.href.replace("#", "");
 
             return (
               <a
                 key={item.label}
                 href={item.href}
-                className={`relative whitespace-nowrap py-2 transition hover:text-[var(--brand)] ${
-                  index === 0 ? "text-[var(--ink)]" : "text-[var(--copy)]"
-                }`}
+                className="relative whitespace-nowrap py-2 text-[var(--ink)] transition hover:text-[var(--brand)]"
                 onClick={(event) => handleAnchorClick(event, targetId)}
               >
                 {item.label}
-                {index === 0 ? (
-                  <span className="absolute inset-x-0 -bottom-2 h-[3px] rounded-full bg-[var(--brand)]" />
-                ) : null}
               </a>
             );
           })}

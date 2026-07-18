@@ -1,4 +1,3 @@
-import { DigitalBankingSection } from "./DigitalBankingSection";
 import { FaqSection } from "./FaqSection";
 import { Footer } from "./Footer";
 import { Header } from "@/components/term-deposits/Header";
@@ -20,7 +19,6 @@ export function TermDepositsPage() {
       <ProductComparison />
       <RatesSection />
       <OpenAccountSection />
-      <DigitalBankingSection />
       <FaqSection />
       <Footer />
       <ScrollToTopButton />

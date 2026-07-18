@@ -77,16 +77,14 @@ export const sectionNavItems: NavItem[] = [
   { label: "Products", href: "#products" },
   { label: "Rates and fees", href: "#rates-and-fees" },
   { label: "Open an account", href: "#open-an-account" },
-  { label: "Digital banking", href: "#digital-banking" },
   { label: "FAQs", href: "#faqs" },
 ];
 
 export const productCards: ProductCard[] = [
   {
-    badge: "New",
-    title: "For individual or joint accounts",
+    title: "For individual accounts",
     description:
-      "We've reimagined how term deposits work with the Macquarie Digital Term Deposit.",
+      "We've reimagined how term deposits work with the Macquarie Term Deposit.",
     bullets: [
       {
         label: "Term periods:",
@@ -107,8 +105,8 @@ export const productCards: ProductCard[] = [
     secondaryHref: "#digital-rates",
   },
   {
-    title: "For company or trust accounts",
-    description: "Our classic Macquarie Term Deposit offering.",
+    title: "For company accounts",
+    description: "Our classic Macquarie Term Deposit rates are offered to Australian companies.",
     bullets: [
       {
         label: "Term periods:",
@@ -116,7 +114,7 @@ export const productCards: ProductCard[] = [
       },
       {
         label: "At the end of your term:",
-        text: "Funds will automatically rollover to the same term, with the option to update the maturity instructions in-app.",
+        text: "Funds will automatically rollover to the same term, with the option to update the maturity instructions in banking.",
       },
       {
         label: "To break your term deposit early:",
@@ -131,17 +129,17 @@ export const productCards: ProductCard[] = [
 ];
 
 export const digitalRatesUnderMillion: SimpleRateRow[] = [
-  { term: "3 months", maturity: "5.00% p.a." },
-  { term: "6 months", maturity: "5.10% p.a." },
-  { term: "9 months", maturity: "5.15% p.a." },
-  { term: "1 year", maturity: "5.20% p.a." },
+  { term: "3 months", maturity: "7.00% p.a." },
+  { term: "6 months", maturity: "7.10% p.a." },
+  { term: "9 months", maturity: "7.15% p.a." },
+  { term: "1 year", maturity: "7.20% p.a." },
 ];
 
 export const digitalRatesOverMillion: SimpleRateRow[] = [
-  { term: "3 months", maturity: "4.75% p.a." },
-  { term: "6 months", maturity: "4.95% p.a." },
-  { term: "9 months", maturity: "5.05% p.a." },
-  { term: "1 year", maturity: "5.05% p.a." },
+  { term: "3 months", maturity: "6.75% p.a." },
+  { term: "6 months", maturity: "6.95% p.a." },
+  { term: "9 months", maturity: "7.05% p.a." },
+  { term: "1 year", maturity: "7.10% p.a." },
 ];
 
 export const classicRatesUnderMillion: DetailedRateRow[] = [
@@ -331,18 +329,8 @@ export const digitalAccordionItems: AccordionItem[] = [
     title: "Fees, terms and conditions",
     paragraphs: [
       "No account fees.",
-      "Macquarie Digital Term Deposit funds are locked in until maturity. At least 31 days' notice is required to close your account and access your funds prior to the maturity date, except in cases of hardship. Digital Term Deposits will not earn any interest (0%) during the notice period.",
+      "Macquarie Term Deposit funds are locked in until maturity. At least 31 days' notice is required to close your account and access your funds prior to the maturity date, except in cases of hardship. Term Deposits will not earn any interest (0%) during the notice period.",
       "If you're opening multiple term deposit accounts with similar investment terms within a short period of time, the lower rate may be applied across the total balance of your term deposits.",
-    ],
-    links: [
-      {
-        label: "Macquarie Digital Term Deposit Account Terms and Conditions",
-        href: "#",
-      },
-      {
-        label: "Macquarie Banking Terms and Conditions",
-        href: "#",
-      },
     ],
   },
 ];
@@ -395,29 +383,28 @@ export const futureSections = [
 export const openAccountOptions: OpenAccountOption[] = [
   {
     value: "individual",
-    label: "An individual or joint account",
-    title: "How do I open a term deposit as an individual or joint account holder?",
+    label: "An individual account",
+    title: "How do I open a term deposit as an individual account holder?",
     intro:
-      "If you're applying as an individual or joint account holder, you'll first need to have a Macquarie Transaction or Savings Account in the same name(s) as the term deposit you're applying for.",
+      "If you're applying as an individual account holder, you'll first need to have a Macquarie Transaction Account in the same name as the term deposit you're applying for.",
     details: [
-      "If you don't already have a Macquarie Transaction Account, you can open one by completing the online application via Macquarie Online Banking or the Macquarie Mobile Banking app.",
-      "Once your linked Macquarie Transaction or Savings Account is ready, you can open a Macquarie Digital Term Deposit in the same name(s).",
-      "Macquarie Digital Term Deposits are for individual and joint account holders without a financial adviser.",
-      "For more information on opening a Macquarie Transaction Account or a Macquarie Digital Term Deposit, visit the Help Centre.",
+      "If you don't already have a Macquarie Transaction Account, please visit the Help Centre.",
+      "Once your Macquarie Transaction Account is ready, we can open a Macquarie Term Deposit in the same name.",
+      "Macquarie Term Deposits are for individual account holders without a financial adviser.",
+      "For more information on opening a Macquarie Transaction Account or a Macquarie Term Deposit, visit the Help Centre.",
     ],
-    note: "Macquarie Digital Term Deposits are not available for clients with a financial adviser. Please contact your adviser to open a Macquarie Term Deposit.",
+    note: "Macquarie Term Deposits are not available for clients with a financial adviser. Please contact our adviser to open a Macquarie Term Deposit.",
   },
   {
     value: "company",
-    label: "A company or trust account",
-    title: "How do I open a term deposit as a company or trust?",
+    label: "A company account",
+    title: "How do I open a term deposit as a company?",
     intro:
-      "To open a term deposit as a company or trust, you'll need to open a Macquarie Term Deposit online and select your account type before you begin the application.",
+      "To open a term deposit as a company, you'll need to open a Macquarie Term Deposit online with the help of our adviser.",
     details: [
-      "You need to be an Australian resident, be at least 18 years old, and have a minimum investment of $5,000.",
-      "You'll need a driver's licence or passport, your current email and mobile number, and a nominated bank account for us to fund your term deposit.",
+      "You need to be an Australian resident, be at least 18 years old, and have a minimum investment of $25,000.",
+      "You'll need a driver's licence or passport, your current email and mobile number.",
       "During the application, you can choose the amount you want to invest, how often you want interest paid, and which bank account funds will be debited from and returned to at maturity.",
-      "Your nominated account must be in the same name and structure as your term deposit, accept both direct debits and credits, contain sufficient funds, and not be a Macquarie Cash Management Accelerator Account or Macquarie Vision Savings Account.",
       "For more information, please visit the Help Centre.",
     ],
   },
@@ -430,109 +417,34 @@ export const digitalBankingBullets = [
 
 export const faqItems: FaqItem[] = [
   {
-    question: "What's the difference between a Macquarie Term Deposit and Macquarie Digital Term Deposit?",
+    question: "How do I open a term deposit as an individual account holder?",
     blocks: [
       {
-        text: "Macquarie offers two types of term deposits. The type of account you need depends on your entity type and whether you have a financial adviser.",
+        text: "If you're applying as an individual holder, you'll first need to have a Macquarie Transaction Account in the same name as the term deposit you're applying for.",
       },
       {
-        title: "Macquarie Digital Term Deposit",
-        bullets: [
-          "Eligible: Individual and joint account holders without a financial adviser",
-          "Minimum deposit: $25,000",
-          "Terms available: 3, 6, 9, or 12 months",
-          "Interest payment: Paid at maturity",
-          "Account linking: Requires a linked Macquarie Transaction or Savings Account",
-          "At maturity: Automatically closes and funds return to your linked account with no rollovers",
-          "Early withdrawal: 31-day notice required; interest rate adjusts to 0% for the notice period",
-        ],
+        text: "If you don't have a Macquarie Transaction Account, you can open one by simply contacting Macquarie Support using the Help Centre.",
       },
       {
-        title: "Macquarie Term Deposit",
-        bullets: [
-          "Eligible: Individual and joint account holders with a financial adviser, plus companies, trusts and SMSFs",
-          "Minimum deposit: $5,000",
-          "Terms available: Between 1-12 months, or 2-5 years",
-          "Interest payment: Monthly, quarterly, bi-annually, annually, or at maturity",
-          "At maturity: Option to withdraw funds or roll over into a new term",
-          "Early withdrawal: 31-day notice required; 25% break fee applied to accrued interest",
-        ],
-      },
-      {
-        text: "For more information please visit our Help Centre.",
+        text: "Note: Macquarie Term Deposits are not available for clients with a financial adviser. Please contact our adviser to open a Macquarie Term Deposit.",
       },
     ],
   },
   {
-    question:
-      "I already have a term deposit with Macquarie. How do I check if it is a Macquarie Term Deposit or Macquarie Digital Term Deposit?",
+    question: "How do I open a term deposit as a company?",
     blocks: [
-      {
-        text: "You can check your account type by logging into your Macquarie Mobile Banking app or Macquarie Online Banking.",
-      },
-      {
-        bullets: [
-          "Select your term deposit from your account list.",
-          "Select I want to -> view account and term details.",
-          "Under Product, it will specifically state whether it is a Macquarie Digital Term Deposit or Term Deposit for Macquarie Term Deposit.",
-        ],
-      },
-      {
-        text: "For more information please visit our Help Centre.",
-      },
-    ],
-  },
-  {
-    question: "How do I open a term deposit as an individual or joint account holder?",
-    blocks: [
-      {
-        text: "If you're applying as an individual or joint account holder, you'll first need to have a Macquarie Transaction or Savings Account in the same name(s) as the term deposit you're applying for.",
-      },
-      {
-        text: "If you don't have a Macquarie Transaction Account, you can open one by completing the online application via Macquarie Online Banking or the Macquarie Mobile Banking app.",
-      },
-      {
-        text: "For more information on how to open a Macquarie Transaction Account or a Macquarie Digital Term Deposit please visit our Help Centre.",
-      },
-      {
-        text: "Note: Macquarie Digital Term Deposits are not available for clients with a financial adviser. Please contact your adviser to open a Macquarie Term Deposit.",
-      },
-    ],
-  },
-  {
-    question: "How do I open a term deposit as a company or trust?",
-    blocks: [
-      {
-        text: "To open a term deposit as a company or trust, you'll need to open a Macquarie Term Deposit online.",
-      },
-      {
-        text: "Before you begin your application, you'll need to select your account type, for example company or trust.",
-      },
       {
         title: "To open a Macquarie Term Deposit, you need to:",
         bullets: [
           "Be an Australian resident",
           "Be at least 18 years old",
-          "Have a minimum investment of $5,000",
+          "Have a minimum investment of $25,000",
           "Have a driver's licence or passport",
-          "Provide a nominated bank account for us to fund your term deposit",
           "Provide your current email and mobile number",
         ],
       },
       {
         text: "As part of your application, you can elect the amount you want to invest, the frequency of your interest payments and which bank account your funds will be debited from and returned to when your term deposit reaches maturity.",
-      },
-      {
-        title: "Your nominated account must:",
-        bullets: [
-          "Be in the same name and structure as your term deposit",
-          "Be able to accept both direct debits and credits",
-          "Contain sufficient funds for the investment amount",
-          "Not be a Macquarie Cash Management Accelerator Account or Macquarie Vision Savings Account",
-        ],
-      },
-      {
-        text: "For more information please visit our Help Centre.",
       },
     ],
   },
@@ -540,31 +452,8 @@ export const faqItems: FaqItem[] = [
     question: "What happens when my term deposit matures?",
     blocks: [
       {
-        title: "If you hold a Macquarie Digital Term Deposit",
-        text: "On maturity, your Macquarie Digital Term Deposit will be closed and your investment amount plus any interest earned will be returned to your linked Macquarie Transaction or Savings Account. Rollovers are not available for this product.",
-      },
-      {
         title: "If you hold a Macquarie Term Deposit",
-        text: "Before the maturity date of your Macquarie Term Deposit, you can provide maturity instructions via Macquarie Online Banking or the Macquarie Mobile Banking app.",
-      },
-      {
-        bullets: [
-          "Reinvest principal and interest",
-          "Reinvest principal only",
-          "Close your account and withdraw funds",
-        ],
-      },
-      {
-        text: "If you don't provide maturity instructions by the maturity date, your Macquarie Term Deposit funds will be automatically reinvested for the same term.",
-      },
-      {
-        text: "After your term deposit has matured, you will have a grace period of 5 business days or 7 calendar days, whichever is longer, to make certain changes to your term deposit details or close your account and withdraw funds.",
-      },
-      {
-        text: "After this time, if you don't update your maturity instructions, your term deposit funds will be reinvested and you will need to provide 31 days' notice to withdraw it.",
-      },
-      {
-        text: "To find out more on how to provide maturity instructions, please see Viewing and managing term deposit maturity and instructions.",
+        text: "On maturity, your Macquarie Term Deposit will be closed and your investment amount plus any interest earned will be returned to your linked Macquarie Transaction Account or your given Bank Account.",
       },
     ],
   },
@@ -572,22 +461,11 @@ export const faqItems: FaqItem[] = [
     question: "How do I fund my term deposit account?",
     blocks: [
       {
-        title: "Macquarie Digital Term Deposit",
-        bullets: [
-          "All deposits are made by transfer from the selected Macquarie Transaction Account or Macquarie Savings Account on account opening.",
-          "You can't add additional funds to your Macquarie Digital Term Deposit during your investment term.",
-        ],
-      },
-      {
         title: "Macquarie Term Deposit",
         bullets: [
-          "All deposits are made via direct debit from a nominated bank account established during the account opening process.",
-          "Your term deposit will be funded overnight from the bank account nominated during the online application, and funds will appear in your account on the day after the Term Deposit has been opened.",
+          "All deposits are made by transfer from the selected Macquarie Transaction Account or your Bank Account on account opening process.",
           "You can't add additional funds to your Macquarie Term Deposit during your investment term.",
         ],
-      },
-      {
-        text: "Visit Help Centre for more information.",
       },
     ],
   },
@@ -605,14 +483,6 @@ export const faqItems: FaqItem[] = [
       },
       {
         text: "The scheme aims to return deposits to account holders within seven days of activation of the FCS. Once activated, the FCS will be administered by APRA.",
-      },
-      {
-        title: "The objectives of the FCS are to:",
-        bullets: [
-          "Protect depositors of ADIs and claimants of general insurers from potential loss in the unlikely event of failure",
-          "Provide depositors with prompt access to protected deposits",
-          "Support the stability of the Australian financial system",
-        ],
       },
     ],
   },
@@ -644,7 +514,6 @@ export const existingHelpCards = [
 
 export const saveWays = [
   "Savings account",
-  "Transaction account",
   "Business savings account",
 ] as const;
 
@@ -655,26 +524,9 @@ export const additionalInformation = [
   "Android, Google Pay, Google Chrome and the Google Logo are trademarks of Google LLC.",
 ];
 
-export const footerPrimaryLinks = [
-  "Macquarie Group",
-  "Everyday banking",
-  "Home loans",
-  "Investing and super",
-  "Business banking",
-  "Private Bank",
-];
+export const footerPrimaryLinks: string[] = [];
 
-export const footerSecondaryLinks = [
-  "Download Macquarie App",
-  "Important information",
-  "Privacy and cookies",
-  "Security and scams",
-  "Resolve a complaint",
-  "Financial assistance",
-  "Financial Services Guide",
-  "Social media",
-  "Careers",
-];
+export const footerSecondaryLinks: string[] = [];
 
 export const footerDisclaimer =
   "Except for Macquarie Bank Limited ABN 46 008 583 542 AFSL and Australian Credit Licence 237502 (MBL), any Macquarie entity referred to on this page is not an authorised deposit-taking institution for the purposes of the Banking Act 1959 (Cth). That entity's obligations do not represent deposits or other liabilities of MBL. Any investments are subject to investment risk including possible delays in repayment and loss of income and principal invested. MBL does not guarantee or otherwise provide assurance in respect of the obligations of that entity, unless noted otherwise.";

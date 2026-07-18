@@ -1,4 +1,4 @@
-import { ArrowRight, BadgePercent, Smartphone, WalletCards } from "lucide-react";
+import { ArrowRight, Smartphone, WalletCards } from "lucide-react";
 
 import { productCards } from "@/lib/term-deposit-data";
 
@@ -27,18 +27,12 @@ export function ProductComparison() {
             return (
               <article
                 key={card.title}
-                className="rounded-[30px] border border-[var(--border-soft)] bg-white p-8 shadow-[0_24px_60px_rgba(8,15,39,0.08)]"
+                className="flex h-full flex-col rounded-[30px] border border-[var(--border-soft)] bg-white p-8 shadow-[0_24px_60px_rgba(8,15,39,0.08)]"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--border-soft)] bg-[var(--surface-muted)] text-[var(--ink)]">
                     <Icon className="h-8 w-8 stroke-[1.8]" />
                   </div>
-                  {card.badge ? (
-                    <div className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-soft)] px-4 py-2 text-sm font-semibold text-[var(--brand)]">
-                      <BadgePercent className="h-4 w-4" />
-                      {card.badge}
-                    </div>
-                  ) : null}
                 </div>
 
                 <h3 className="mt-10 font-[family:var(--font-display)] text-3xl leading-tight tracking-[-0.03em] text-[var(--ink)]">
@@ -58,20 +52,22 @@ export function ProductComparison() {
                   ))}
                 </ul>
 
-                <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-auto pt-10">
+                  <div className="flex flex-row gap-3">
                   <a
                     href={card.primaryHref}
-                    className="inline-flex min-h-14 flex-1 items-center justify-center rounded-md bg-[var(--brand)] px-6 text-base font-semibold text-white transition hover:bg-[var(--brand-dark)]"
+                    className="inline-flex min-h-14 flex-1 items-center justify-center rounded-md bg-[var(--brand)] px-5 text-base font-semibold text-white transition hover:bg-[var(--brand-dark)]"
                   >
                     {card.primaryAction}
                   </a>
                   <a
                     href={card.secondaryHref}
-                    className="inline-flex min-h-14 flex-1 items-center justify-center gap-2 rounded-md border border-[var(--brand)] px-6 text-base font-semibold text-[var(--brand)] transition hover:bg-[var(--brand-soft)]"
+                    className="inline-flex min-h-14 flex-1 items-center justify-center gap-2 rounded-md border border-[var(--brand)] px-5 text-base font-semibold text-[var(--brand)] transition hover:bg-[var(--brand-soft)]"
                   >
                     {card.secondaryAction}
                     <ArrowRight className="h-4 w-4" />
                   </a>
+                  </div>
                 </div>
               </article>
             );

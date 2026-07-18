@@ -59,7 +59,7 @@ export function Header() {
         </a>
 
         <nav className="hidden flex-1 items-center self-stretch lg:flex">
-          {primaryNavItems.map((item, index) => (
+          {primaryNavItems.map((item) => (
             <a
               key={item.label}
               href={item.href}

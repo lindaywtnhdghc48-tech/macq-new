@@ -8,7 +8,6 @@ import {
   PiggyBank,
   Smartphone,
   SquareArrowOutUpRight,
-  Wallet,
 } from "lucide-react";
 
 import {
@@ -95,24 +94,14 @@ export function FaqSection() {
 
       <div className="mt-18 bg-[var(--surface-muted)] py-18 sm:py-24">
         <div className="mx-auto max-w-[1120px] px-4 sm:px-6">
-          <h2 className="font-[family:var(--font-display)] text-4xl leading-tight tracking-[-0.04em] text-[var(--ink)] sm:text-6xl">
-            Already have a term deposit with us?
-          </h2>
-
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {existingHelpCards.map((card, index) => (
+          <div className="grid gap-6 lg:grid-cols-3">
+            {existingHelpCards.slice(1, 2).map((card) => (
               <article
                 key={card.title}
-                className="rounded-[28px] border border-[var(--border-soft)] bg-white p-8 shadow-[0_18px_45px_rgba(8,15,39,0.05)]"
+                className="rounded-[28px] border border-[var(--border-soft)] bg-white p-8 shadow-[0_18px_45px_rgba(8,15,39,0.05)] lg:col-span-2"
               >
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-soft)] text-[var(--brand)]">
-                  {index === 0 ? (
-                    <Smartphone className="h-6 w-6" />
-                  ) : index === 1 ? (
-                    <CircleHelp className="h-6 w-6" />
-                  ) : (
-                    <Wallet className="h-6 w-6" />
-                  )}
+                  <CircleHelp className="h-6 w-6" />
                 </div>
                 <h3 className="mt-6 font-[family:var(--font-display)] text-3xl leading-tight tracking-[-0.03em] text-[var(--ink)]">
                   {card.title}

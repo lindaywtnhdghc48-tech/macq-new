@@ -38,8 +38,8 @@ describe("term deposit content", () => {
   it("includes the new open account, faq, and footer content", () => {
     expect(openAccountOptions).toHaveLength(2);
     expect(faqItems.length).toBeGreaterThanOrEqual(6);
-    expect(saveWays).toHaveLength(3);
+    expect(saveWays).toHaveLength(2);
     expect(additionalInformation.length).toBeGreaterThan(2);
-    expect(footerPrimaryLinks).toContain("Macquarie Group");
+    expect(footerPrimaryLinks).toHaveLength(0);
   });
 });
