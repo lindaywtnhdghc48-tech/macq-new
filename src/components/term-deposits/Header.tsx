@@ -67,9 +67,6 @@ export function Header() {
               style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
             >
               {item.label}
-              {index === 0 ? (
-                <span className="absolute right-5 bottom-0 left-5 h-[3px] bg-[var(--brand)]" />
-              ) : null}
             </a>
           ))}
         </nav>
