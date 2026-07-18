@@ -1,0 +1,190 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+import { Lock, Menu, Search, X } from "lucide-react";
+
+import {
+  primaryNavItems,
+  sectionNavItems,
+  utilityNavItems,
+} from "@/lib/term-deposit-data";
+
+export function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-black bg-[var(--nav-dark)] text-white">
+      <div className="border-b border-white/10 bg-[#4d4d4d]">
+        <div className="mx-auto hidden h-9 max-w-[1440px] items-center justify-center gap-9 px-8 text-[13px] font-semibold text-white lg:flex">
+          {utilityNavItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="leading-none tracking-[-0.01em] text-white transition hover:text-white/90"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto flex min-h-[74px] max-w-[1440px] items-center justify-between gap-4 px-4 sm:px-6 lg:min-h-[98px] lg:px-8">
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 text-white transition hover:bg-white/10 lg:hidden"
+          aria-label="Open menu"
+          onClick={() => setMobileOpen(true)}
+        >
+          <Menu className="h-5 w-5" />
+        </button>
+
+        <a
+          href="#"
+          className="hidden shrink-0 items-center gap-[11px] pr-[22px] text-white lg:ml-[24px] lg:inline-flex"
+        >
+          <Image
+            src="/mlogo-white.svg"
+            alt="Macquarie logo"
+            width={47}
+            height={47}
+            className="h-[47px] w-[47px] shrink-0 lg:translate-x-[8px]"
+          />
+          <span
+            className="translate-y-[1px] text-[18px] leading-none font-normal tracking-[-0.015em] text-white"
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            MACQUARIE
+          </span>
+        </a>
+
+        <nav className="hidden flex-1 items-center self-stretch lg:flex">
+          {primaryNavItems.map((item, index) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className={`relative flex items-center px-5 text-[15px] font-semibold tracking-[-0.015em] transition hover:text-white ${
+                index === 0 ? "text-white" : "text-white"
+              }`}
+              style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            >
+              {item.label}
+              {index === 0 ? (
+                <span className="absolute bottom-0 left-5 h-[3px] w-[78px] bg-[var(--brand)]" />
+              ) : null}
+            </a>
+          ))}
+        </nav>
+
+        <a href="#" className="inline-flex items-center gap-2 text-white lg:hidden">
+          <Image
+            src="/mlogo-white.svg"
+            alt="Macquarie logo"
+            width={39}
+            height={39}
+            className="h-[39px] w-[39px] shrink-0"
+          />
+          <span
+            className="translate-y-[1px] text-base leading-none font-normal tracking-[-0.015em] text-white"
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            MACQUARIE
+          </span>
+        </a>
+
+        <div className="flex items-center gap-5 lg:self-stretch">
+          <a
+            href="#"
+            aria-label="Search"
+            className="hidden h-11 w-11 items-center justify-center rounded-full border border-white/18 text-white transition hover:bg-white/10 sm:inline-flex lg:self-center"
+          >
+            <Search className="h-[18px] w-[18px]" strokeWidth={2} />
+          </a>
+          <a
+            href="#"
+            className="inline-flex h-11 items-center justify-center rounded-md bg-[var(--brand)] px-4 text-sm font-semibold text-white transition hover:bg-[var(--brand-dark)] sm:min-w-[112px] lg:min-h-full lg:min-w-[138px] lg:gap-2 lg:rounded-none lg:px-0 lg:text-[15px]"
+          >
+            <Lock className="hidden h-4 w-4 lg:block" strokeWidth={2.1} />
+            Log in
+          </a>
+        </div>
+      </div>
+
+      {mobileOpen ? (
+        <div className="fixed inset-0 z-[60] bg-black/55 backdrop-blur-sm lg:hidden">
+          <div className="ml-auto flex h-full w-full max-w-sm flex-col bg-[var(--nav-dark)] p-6 text-white shadow-2xl">
+            <div className="mb-6 flex items-center justify-between">
+              <span className="inline-flex items-center gap-2.5">
+                <Image
+                  src="/mlogo-white.svg"
+                  alt="Macquarie logo"
+                  width={39}
+                  height={39}
+                  className="h-[39px] w-[39px] shrink-0"
+                />
+                <span
+                  className="translate-y-[1px] text-base leading-none font-normal tracking-[-0.015em] text-white"
+                  style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                >
+                  MACQUARIE
+                </span>
+              </span>
+              <button
+                type="button"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 transition hover:bg-white/10"
+                aria-label="Close menu"
+                onClick={() => setMobileOpen(false)}
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="space-y-3 border-b border-white/12 pb-5">
+              {utilityNavItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block rounded-2xl px-4 py-3 text-sm text-white/86 transition hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            <div className="space-y-3 py-5">
+              {primaryNavItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block rounded-2xl px-4 py-3 text-base font-semibold transition hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            <div className="mt-auto rounded-[28px] border border-white/12 bg-white/5 p-4">
+              <p className="mb-3 text-xs uppercase tracking-[0.24em] text-white/55">
+                Jump to section
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {sectionNavItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="rounded-full border border-white/12 px-4 py-2 text-sm text-white/84 transition hover:bg-white/10"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </header>
+  );
+}
