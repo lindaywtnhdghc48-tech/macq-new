@@ -63,9 +63,9 @@ const bankingAppImagePrompt =
 export const bankingAppImageUrl = `https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=${encodeURIComponent(bankingAppImagePrompt)}&image_size=portrait_4_3`;
 
 export const utilityNavItems: NavItem[] = [
-  { label: "Personal and Business", href: "#" },
-  { label: "Contact us", href: "#open-an-account" },
-  { label: "Help center", href: "#faqs" },
+  { label: "Personal and Business", href: "/" },
+  { label: "Contact us", href: "/contact-us" },
+  { label: "Help centre", href: "/help-centre" },
 ];
 
 export const primaryNavItems: NavItem[] = [
@@ -124,7 +124,7 @@ export const productCards: ProductCard[] = [
     primaryAction: "Open now",
     primaryHref: "#open-an-account",
     secondaryAction: "Discover more",
-    secondaryHref: "#classic-rates",
+    secondaryHref: "#digital-rates",
   },
 ];
 

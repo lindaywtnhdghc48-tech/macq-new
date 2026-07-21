@@ -25,7 +25,7 @@ describe("term deposit content", () => {
   it("keeps the comparison cards wired to real sections", () => {
     expect(productCards).toHaveLength(2);
     expect(productCards[0].secondaryHref).toBe("#digital-rates");
-    expect(productCards[1].secondaryHref).toBe("#classic-rates");
+    expect(productCards[1].secondaryHref).toBe("#digital-rates");
   });
 
   it("provides rate rows for both deposit amount states", () => {

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -18,13 +19,13 @@ export function Header() {
       <div className="border-b border-white/10 bg-[#4d4d4d]">
         <div className="mx-auto hidden h-9 max-w-[1440px] items-center justify-center gap-9 px-8 text-[13px] font-semibold text-white lg:flex">
           {utilityNavItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="leading-none tracking-[-0.01em] text-white transition hover:text-white/90"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -39,8 +40,8 @@ export function Header() {
           <Menu className="h-5 w-5" />
         </button>
 
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="hidden shrink-0 items-center gap-[11px] pr-[22px] text-white lg:ml-[24px] lg:inline-flex"
         >
           <Image
@@ -56,7 +57,7 @@ export function Header() {
           >
             MACQUARIE
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden flex-1 items-center self-stretch lg:flex">
           {primaryNavItems.map((item) => (
@@ -71,7 +72,7 @@ export function Header() {
           ))}
         </nav>
 
-        <a href="#top" className="inline-flex items-center gap-2 text-white lg:hidden">
+        <Link href="/" className="inline-flex items-center gap-2 text-white lg:hidden">
           <Image
             src="/mlogo-white.svg"
             alt="Macquarie logo"
@@ -85,7 +86,7 @@ export function Header() {
           >
             MACQUARIE
           </span>
-        </a>
+        </Link>
       </div>
 
       {mobileOpen ? (
@@ -119,14 +120,14 @@ export function Header() {
 
             <div className="space-y-3 border-b border-white/12 pb-5">
               {utilityNavItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   className="block rounded-2xl px-4 py-3 text-sm text-white/86 transition hover:bg-white/10"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
 
