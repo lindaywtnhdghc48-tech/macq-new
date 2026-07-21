@@ -13,7 +13,7 @@ export function TermDepositsPage() {
     <div id="top" className="bg-[var(--surface)] text-[var(--ink)]">
       <Header />
       <HeroBanner />
-      <div className="relative z-30 mx-auto -mt-1 sm:-mt-2 lg:-mt-9">
+      <div className="relative z-30 mx-auto -mt-1 sm:-mt-2 lg:-mt-3">
         <StickySectionNav />
       </div>
       <ProductComparison />

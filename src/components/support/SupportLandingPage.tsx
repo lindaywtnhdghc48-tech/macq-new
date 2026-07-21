@@ -25,7 +25,7 @@ export function SupportLandingPage({
 
       <section className="relative overflow-hidden bg-[#d7d1cb]">
         <div
-          className="mx-auto min-h-[300px] max-w-[1440px] bg-cover bg-center bg-no-repeat sm:min-h-[360px] lg:min-h-[410px]"
+          className="w-full min-h-[300px] bg-cover bg-center bg-no-repeat sm:min-h-[360px] lg:min-h-[410px]"
           style={{
             backgroundImage: "linear-gradient(90deg, rgba(18,16,16,0.16), rgba(18,16,16,0.03)), url('/contact_us.jpeg')",
             backgroundPosition: "center center",

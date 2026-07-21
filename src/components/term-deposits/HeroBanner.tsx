@@ -1,17 +1,14 @@
-import { heroImageUrl } from "@/lib/term-deposit-data";
-
 export function HeroBanner() {
   return (
-    <section className="border-b border-[var(--border-soft)] bg-[var(--surface)]">
-      <div className="mx-auto max-w-[1360px] px-4 pt-4 pb-4 sm:px-6">
-        <p className="text-xs font-medium text-[var(--copy)]">Term deposits</p>
-      </div>
-
-      <div className="mx-auto max-w-[1500px] px-0 pb-7 sm:px-4 lg:px-6">
+    <section className="bg-[var(--surface)]">
+      <div>
         <div className="relative overflow-hidden bg-[#d7d1cb] shadow-[0_24px_70px_rgba(8,15,39,0.15)]">
           <div
             className="min-h-[390px] bg-cover bg-center sm:min-h-[470px] lg:min-h-[410px] xl:min-h-[440px]"
-            style={{ backgroundImage: `linear-gradient(90deg, rgba(18,16,16,0.26), rgba(18,16,16,0.08)), url(${heroImageUrl})` }}
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg, rgba(18,16,16,0.26), rgba(18,16,16,0.08)), url('/main_page.jpeg')",
+            }}
           />
 
           <div className="relative mx-auto -mt-[210px] max-w-[1360px] px-4 pb-6 sm:-mt-[248px] sm:px-6 lg:absolute lg:inset-x-0 lg:top-[36px] lg:mt-0 lg:pb-0">
