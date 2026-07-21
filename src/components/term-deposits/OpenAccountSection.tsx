@@ -12,7 +12,7 @@ export function OpenAccountSection() {
     openAccountOptions.find((option) => option.value === selected) ?? openAccountOptions[0];
 
   return (
-    <section id="open-an-account" className="scroll-mt-72 bg-[var(--surface)] py-18 sm:py-24">
+    <section id="open-an-account" className="scroll-mt-36 bg-[var(--surface)] py-18 sm:py-24">
       <div className="mx-auto max-w-[1120px] px-4 sm:px-6">
         <div className="mx-auto max-w-[760px] text-center">
           <div className="inline-flex h-16 w-16 items-center justify-center rounded-full border border-[var(--border-soft)] bg-white shadow-[0_12px_25px_rgba(8,15,39,0.08)]">
