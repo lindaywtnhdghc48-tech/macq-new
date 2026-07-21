@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 
 import { Header } from "@/components/term-deposits/Header";
 
@@ -138,7 +138,7 @@ export function SupportLandingPage({
 
                     {submitted ? (
                       <div className="flex w-full items-start gap-3 rounded-2xl border border-[#c3dfa8] bg-[#f3faec] px-5 py-4">
-                        <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#3a8a2e]" />
+                        <CircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#3a8a2e]" />
                         <div>
                           <p className="text-sm font-semibold text-[#2d6e23] sm:text-base">
                             Your enquiry has been submitted successfully.

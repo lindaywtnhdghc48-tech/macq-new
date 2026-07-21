@@ -27,4 +27,5 @@ declare module "lucide-react" {
   export const Lock: LucideIcon;
   export const HandCoins: LucideIcon;
   export const Info: LucideIcon;
+  export const CircleCheck: LucideIcon;
 }
