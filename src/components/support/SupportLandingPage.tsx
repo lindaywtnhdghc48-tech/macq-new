@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CircleCheck } from "lucide-react";
 
 import { Header } from "@/components/term-deposits/Header";
+import { Footer } from "@/components/term-deposits/Footer";
 
 type SupportLandingPageProps = {
   title: string;
@@ -158,6 +159,41 @@ export function SupportLandingPage({
           )}
         </div>
       </section>
+      <section className="border-t border-[var(--border-soft)] bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-[1120px] px-4 sm:px-6">
+          <h2 className="font-[family:var(--font-display)] text-3xl leading-tight tracking-[-0.03em] text-[var(--ink)] sm:text-4xl">
+            Accessibility options
+          </h2>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            {/* Translating and Interpreting Services */}
+            <div>
+              <h3 className="text-lg font-semibold text-[var(--ink)]">
+                Translating and Interpreting Services
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-[var(--copy)]">
+                If English isn&apos;t your first language, we can arrange for an interpreter to help
+                you communicate with us over the phone. We do this through TIS National, a free service provided by the Australian government.
+              </p>
+              <p className="mt-4 text-sm leading-7 text-[var(--copy)]">
+                To use this service, simply ask for an interpreter when you call us, and we&apos;ll
+                arrange an interpreter to help you with your banking needs.
+              </p>
+            </div>
+
+            {/* National Relay Service */}
+            <div>
+              <h3 className="text-lg font-semibold text-[var(--ink)]">
+                National Relay Service (NRS)
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-[var(--copy)]">
+                If you&apos;re deaf, hard of hearing, or find it difficult speaking on the phone,
+                you can contact us via the NRS, an Australia-wide government initiative which offers relay call options.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }
