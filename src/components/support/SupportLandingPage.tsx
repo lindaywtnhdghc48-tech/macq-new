@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CheckCircle } from "lucide-react";
 
 import { Header } from "@/components/term-deposits/Header";
 
@@ -18,6 +19,12 @@ export function SupportLandingPage({
   showContactForm = false,
 }: SupportLandingPageProps) {
   const [supportType, setSupportType] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = () => {
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 6000);
+  };
 
   return (
     <div className="min-h-screen bg-[var(--surface)] text-[var(--ink)]">
@@ -73,51 +80,77 @@ export function SupportLandingPage({
               </select>
 
               {supportType ? (
-                <div className="mt-6 grid gap-5 md:grid-cols-2">
-                  <div>
-                    <label htmlFor="contact-name" className="block text-sm font-medium text-[var(--copy)]">
-                      Name
-                    </label>
-                    <input
-                      id="contact-name"
-                      type="text"
-                      className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
-                    />
+                <>
+                  <div className="mt-6 grid gap-5 md:grid-cols-2">
+                    <div>
+                      <label htmlFor="contact-name" className="block text-sm font-medium text-[var(--copy)]">
+                        Name
+                      </label>
+                      <input
+                        id="contact-name"
+                        type="text"
+                        className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="contact-phone" className="block text-sm font-medium text-[var(--copy)]">
+                        Contact Phone
+                      </label>
+                      <input
+                        id="contact-phone"
+                        type="tel"
+                        className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="contact-email" className="block text-sm font-medium text-[var(--copy)]">
+                        Email
+                      </label>
+                      <input
+                        id="contact-email"
+                        type="email"
+                        className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="contact-time" className="block text-sm font-medium text-[var(--copy)]">
+                        Best date and time to contact you
+                      </label>
+                      <input
+                        id="contact-time"
+                        type="datetime-local"
+                        className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
+                      />
+                    </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="contact-phone" className="block text-sm font-medium text-[var(--copy)]">
-                      Contact Phone
-                    </label>
-                    <input
-                      id="contact-phone"
-                      type="tel"
-                      className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
-                    />
-                  </div>
+                  <div className="mt-8 flex flex-col items-center gap-5">
+                    <button
+                      type="button"
+                      onClick={() => handleSubmit()}
+                      className="inline-flex w-full max-w-[320px] items-center justify-center rounded-2xl bg-[var(--brand)] px-6 py-4 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(0,102,204,0.24)] transition hover:bg-[var(--brand-dark)] sm:text-base"
+                    >
+                      Submit
+                    </button>
 
-                  <div>
-                    <label htmlFor="contact-email" className="block text-sm font-medium text-[var(--copy)]">
-                      Email
-                    </label>
-                    <input
-                      id="contact-email"
-                      type="email"
-                      className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
-                    />
+                    {submitted ? (
+                      <div className="flex w-full items-start gap-3 rounded-2xl border border-[#c3dfa8] bg-[#f3faec] px-5 py-4">
+                        <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#3a8a2e]" />
+                        <div>
+                          <p className="text-sm font-semibold text-[#2d6e23] sm:text-base">
+                            Your enquiry has been submitted successfully.
+                          </p>
+                          <p className="mt-1 text-sm text-[#4b7a41] sm:text-[0.9rem]">
+                            Thank you for reaching out. A member of our team will be in touch with you shortly.
+                          </p>
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
-
-                  <div>
-                    <label htmlFor="contact-time" className="block text-sm font-medium text-[var(--copy)]">
-                      Best date and time to contact you
-                    </label>
-                    <input
-                      id="contact-time"
-                      type="datetime-local"
-                      className="mt-2 w-full rounded-[6px] border border-[var(--border-strong)] bg-white px-4 py-3 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--brand)] sm:text-base"
-                    />
-                  </div>
-                </div>
+                </>
               ) : null}
             </div>
           ) : (
