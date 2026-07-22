@@ -69,8 +69,8 @@ export const utilityNavItems: NavItem[] = [
 ];
 
 export const primaryNavItems: NavItem[] = [
-  { label: "Individual Accounts", href: "#" },
-  { label: "Company Accounts", href: "#" },
+  { label: "Individual Accounts", href: "#products" },
+  { label: "Company Accounts", href: "#products" },
 ];
 
 export const sectionNavItems: NavItem[] = [

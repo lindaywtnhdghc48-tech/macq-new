@@ -5,9 +5,17 @@ import { ArrowRight } from "lucide-react";
 
 import { sectionNavItems } from "@/lib/term-deposit-data";
 
-function getScrollOffset() {
+function getScrollOffset(targetId: string) {
   if (typeof window === "undefined") {
     return 0;
+  }
+
+  // For open-an-account, scroll further down so the content card
+  // (with the blue CTA button) is fully visible
+  if (targetId === "open-an-account") {
+    if (window.innerWidth < 640) return 0;
+    if (window.innerWidth < 1024) return 0;
+    return -340;
   }
 
   if (window.innerWidth < 640) {
@@ -18,7 +26,7 @@ function getScrollOffset() {
     return 135;
   }
 
-  return 120;
+  return 100;
 }
 
 export function StickySectionNav() {
@@ -34,7 +42,7 @@ export function StickySectionNav() {
 
     event.preventDefault();
 
-    const offset = getScrollOffset();
+    const offset = getScrollOffset(targetId);
     const top = element.getBoundingClientRect().top + window.scrollY - offset;
 
     window.history.replaceState(null, "", `#${targetId}`);
@@ -65,9 +73,8 @@ export function StickySectionNav() {
           })}
         </nav>
         <a
-          href="#open-an-account"
+          href="/contact-us"
           className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[var(--brand)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-dark)] sm:w-auto sm:min-w-[150px]"
-          onClick={(event) => handleAnchorClick(event, "open-an-account")}
         >
           Apply now
           <ArrowRight className="h-4 w-4" />

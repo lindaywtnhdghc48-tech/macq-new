@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -13,6 +14,29 @@ import {
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  function handleHomeClick(href: string, e: React.MouseEvent<HTMLAnchorElement>) {
+    if (href === "/" && pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  function handleSectionClick(href: string, e: React.MouseEvent<HTMLAnchorElement>) {
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    // If element not on this page, let browser navigate normally
+    if (!element) return;
+    e.preventDefault();
+    let offset = window.innerWidth < 640 ? 150 : window.innerWidth < 1024 ? 135 : 119;
+    if (targetId === "open-an-account") {
+      offset = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 0 : -60;
+    }
+    const top = element.getBoundingClientRect().top + window.scrollY - offset;
+    window.history.replaceState(null, "", href);
+    window.scrollTo({ top, behavior: "smooth" });
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-black bg-[var(--nav-dark)] text-white">
@@ -22,6 +46,7 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
+              onClick={(e) => handleHomeClick(item.href, e)}
               className="leading-none tracking-[-0.01em] text-white transition hover:text-white/90"
             >
               {item.label}
@@ -64,6 +89,7 @@ export function Header() {
             <a
               key={item.label}
               href={item.href}
+              onClick={(e) => handleSectionClick(item.href, e)}
               className="relative flex items-center px-5 text-[15px] font-semibold tracking-[-0.015em] text-white transition hover:text-white"
               style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
             >
@@ -124,7 +150,7 @@ export function Header() {
                   key={item.label}
                   href={item.href}
                   className="block rounded-2xl px-4 py-3 text-sm text-white/86 transition hover:bg-white/10"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => { handleHomeClick(item.href, e); setMobileOpen(false); }}
                 >
                   {item.label}
                 </Link>
@@ -137,7 +163,7 @@ export function Header() {
                   key={item.label}
                   href={item.href}
                   className="block rounded-2xl px-4 py-3 text-base font-semibold transition hover:bg-white/10"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => { handleSectionClick(item.href, e); setMobileOpen(false); }}
                 >
                   {item.label}
                 </a>

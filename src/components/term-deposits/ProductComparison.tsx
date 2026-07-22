@@ -6,7 +6,7 @@ const icons = [Smartphone, WalletCards];
 
 export function ProductComparison() {
   return (
-    <section id="products" className="scroll-mt-36 bg-[var(--surface)] py-16 sm:py-24">
+    <section className="bg-[var(--surface)] py-16 sm:py-24">
       <div className="mx-auto max-w-[1120px] px-4 sm:px-6">
         <div className="mx-auto max-w-[740px] text-center">
           <h2 className="font-[family:var(--font-display)] text-4xl leading-tight tracking-[-0.04em] text-[var(--ink)] sm:text-6xl">
@@ -20,7 +20,7 @@ export function ProductComparison() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div id="products" className="scroll-mt-[100px] mt-12 grid gap-6 lg:grid-cols-2">
           {productCards.map((card, index) => {
             const Icon = icons[index];
 
