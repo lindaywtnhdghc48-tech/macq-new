@@ -20,7 +20,7 @@ import {
 const saveWayIcons = [PiggyBank, Smartphone, Landmark];
 
 export function FaqSection() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   return (
     <section id="faqs" className="scroll-mt-72 bg-[var(--surface)] pt-18 sm:pt-24">
