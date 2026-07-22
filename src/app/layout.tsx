@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { NavigationScrollReset } from "@/components/NavigationScrollReset";
 import "./globals.css";
 
 const bodyFont = Manrope({
@@ -31,6 +32,7 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} h-full scroll-smooth antialiased`}
     >
       <body suppressHydrationWarning className="min-h-full flex flex-col">
+        <NavigationScrollReset />
         {children}
       </body>
     </html>
