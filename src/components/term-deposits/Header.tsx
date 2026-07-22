@@ -29,7 +29,7 @@ export function Header() {
     // If element not on this page, let browser navigate normally
     if (!element) return;
     e.preventDefault();
-    let offset = window.innerWidth < 640 ? 150 : window.innerWidth < 1024 ? 135 : 119;
+    let offset = window.innerWidth < 640 ? 150 : window.innerWidth < 1024 ? 135 : 100;
     if (targetId === "open-an-account") {
       offset = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 0 : -60;
     }
