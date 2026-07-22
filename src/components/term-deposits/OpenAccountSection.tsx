@@ -67,12 +67,12 @@ export function OpenAccountSection() {
           </div>
 
           <div className="mt-6 flex justify-center">
-            <button
-              type="button"
+            <a
+              href="/contact-us"
               className="inline-flex w-full max-w-[680px] items-center justify-center rounded-2xl bg-[var(--brand)] px-6 py-4 text-center text-sm font-semibold text-white shadow-[0_16px_35px_rgba(0,102,204,0.24)] transition hover:brightness-95 sm:text-base"
             >
               Contact us to open your Macquarie Term Deposit Account
-            </button>
+            </a>
           </div>
         </div>
       </div>

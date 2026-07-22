@@ -501,7 +501,7 @@ export const existingHelpCards = [
     description:
       "Quickly search and find the answer to common questions to manage your term deposit.",
     action: "Visit Help Centre",
-    href: "#faqs",
+    href: "/help-centre",
   },
   {
     title: "Find information on your existing term deposit",
