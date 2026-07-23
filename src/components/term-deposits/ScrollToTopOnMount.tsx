@@ -1,18 +1,41 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 export function ScrollToTopOnMount() {
   const pathname = usePathname();
+  const animationRef = useRef<number | null>(null);
+  const endTimeRef = useRef<number>(0);
 
   useEffect(() => {
+    if (pathname !== "/") return;
+
     // Disable browser scroll restoration
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
-    // Every time this page mounts or we navigate back to "/", go to top
-    window.scrollTo({ top: 0, left: 0 });
+
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    };
+
+    endTimeRef.current = Date.now() + 500; // Keep scrolling to top for 500ms
+
+    const animate = () => {
+      scrollToTop();
+      if (Date.now() < endTimeRef.current) {
+        animationRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    animate();
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, [pathname]);
 
   return null;
