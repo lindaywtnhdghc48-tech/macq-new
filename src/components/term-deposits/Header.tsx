@@ -26,10 +26,11 @@ export function Header() {
   function handleSectionClick(href: string, e: React.MouseEvent<HTMLAnchorElement>) {
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
-    // If element not on this page, navigate to home page with the hash
+    // If element not on this page, go to home and signal a scroll target via sessionStorage
     if (!element) {
       e.preventDefault();
-      window.location.href = "/" + href;
+      sessionStorage.setItem("scrollTarget", targetId);
+      window.location.href = "/";
       return;
     }
     e.preventDefault();
