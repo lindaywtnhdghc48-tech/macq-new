@@ -102,7 +102,7 @@ export const productCards: ProductCard[] = [
     primaryAction: "Open now",
     primaryHref: "/contact-us",
     secondaryAction: "Discover more",
-    secondaryHref: "#digital-rates",
+    secondaryHref: "#rates-and-fees",
   },
   {
     title: "For company accounts",
@@ -124,7 +124,7 @@ export const productCards: ProductCard[] = [
     primaryAction: "Open now",
     primaryHref: "/contact-us",
     secondaryAction: "Discover more",
-    secondaryHref: "#digital-rates",
+    secondaryHref: "#rates-and-fees",
   },
 ];
 

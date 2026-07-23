@@ -26,8 +26,12 @@ export function Header() {
   function handleSectionClick(href: string, e: React.MouseEvent<HTMLAnchorElement>) {
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
-    // If element not on this page, let browser navigate normally
-    if (!element) return;
+    // If element not on this page, navigate to home page with the hash
+    if (!element) {
+      e.preventDefault();
+      window.location.href = "/" + href;
+      return;
+    }
     e.preventDefault();
     let offset = window.innerWidth < 640 ? 150 : window.innerWidth < 1024 ? 135 : 100;
     if (targetId === "open-an-account") {

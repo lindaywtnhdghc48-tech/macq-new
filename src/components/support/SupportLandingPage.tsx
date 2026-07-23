@@ -19,7 +19,7 @@ export function SupportLandingPage({
   supportingText,
   showContactForm = false,
 }: SupportLandingPageProps) {
-  const [supportType, setSupportType] = useState("");
+  const [supportType, setSupportType] = useState("individual");
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = () => {
